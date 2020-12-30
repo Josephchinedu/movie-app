@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:  'Nunito', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body{
+  background-color: #22254b;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.root{
+  display: flex;
+  flex-direction: column; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie{
+  width: 300px;
+  margin: 1rem;
+  background-color: #373869;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.movie img{
+  max-width: 100%;
+}
+
+.App{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+
+}
+
+
+
+.movie-info{
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-info h3{
+  margin: 0;
+}
+
+.movie-overview{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color:  #22254b;
+  right: 0;
+  background-color: #fff;
+  padding: 1rem;
+  transform: translateY(102%);
+  transition: transform 0.3s ease-in-out;
+  overflow: auto;
+  max-height: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.movie:hover .movie-overview{
+  transform: translateY(0%);
+}
+
+header{
+  background-color: #373869;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.search{
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+}
+
+.search:active{
+  outline: 0;
+}
+
+.tag{
+  background-color: #22254b;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.tag.orange{
+  color: orange;
+}
+
+.tag.green{
+  color: green;
+}
+
+.tag.red{
+  color: red;
 }
